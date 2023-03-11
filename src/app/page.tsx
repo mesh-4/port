@@ -1,91 +1,67 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import type { Metadata } from 'next'
 
-const inter = Inter({ subsets: ['latin'] })
+import Banner from './components/banner'
+import SocialLinks from './components/social-links'
+
+const title = 'Mesh Sun Portfolio'
+const description =
+	'Experienced front-end developer proficient in React and Nextjs. Skilled in creating dynamic, user-friendly websites and collaborating effectively.'
+
+export const metadata: Metadata = {
+	title,
+	description,
+	authors: [{ name: 'Mesh Sun', url: 'https://meshs.codes' }],
+	themeColor: '#000000',
+	twitter: {
+		card: 'summary',
+		title,
+		description,
+		site: '@senlima4',
+		creator: '@senlima4',
+	},
+	openGraph: {
+		type: 'website',
+		title,
+		description,
+		siteName: title,
+		url: 'https://meshs.codes',
+	},
+}
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<div className="mt-[20vh]">
+			<Banner />
+			<main className="mt-8">
+				<div className="mx-auto w-8/12 flex">
+					<section className="flex-1 mr-4">
+						<SocialLinks />
+					</section>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+					<section className="flex-1 text-md text-black/85">
+						<p>
+							With 4 years of experience in front-end development, I specialize in working with React, Next.js, and
+							TypeScript. Additionally, I possess the skills necessary to operate RESTful/GraphQL APIs using Node.js or
+							Python.
+						</p>
+						<br />
 
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+						<p>
+							When I entered the software industry, I did so with the idea of changing the world. I believe that the
+							software industry has a strong influence to change people's behavior on the web and online culture
+							through technological innovation, and to promote the development and progress of society.
+						</p>
+						<br />
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
+						<p>
+							I am adept at collaborating with design and infrastructure teams in fast-paced environments, and am
+							comfortable working remotely. Please feel free to contact me to discuss potential collaborations.
+						</p>
+					</section>
+				</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+				<div className="mx-auto w-8/12"></div>
+			</main>
+		</div>
+	)
 }
