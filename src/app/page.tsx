@@ -33,7 +33,7 @@ export default function Home() {
 		<div className="mt-[15vh] md:mt-[20vh]">
 			<Banner />
 			<main className="mt-8">
-				<div className="mx-auto w-8/12 flex flex-col md:flex-row">
+				<div className="mx-auto w-11/12 md:w-8/12 flex flex-col space-y-4 md:flex-row md:space-y-0">
 					<section className="flex-1 md:mr-4">
 						<SocialLinks />
 					</section>
