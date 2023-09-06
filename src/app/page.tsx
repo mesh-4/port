@@ -10,7 +10,7 @@ const description =
 export const metadata: Metadata = {
 	title,
 	description,
-	authors: [{ name: 'Mesh Sun', url: 'https://meshs.codes' }],
+	authors: [{ name: 'Mesh Sun', url: 'https://about.meshs.codes' }],
 	themeColor: '#000000',
 	twitter: {
 		card: 'summary',
@@ -24,17 +24,17 @@ export const metadata: Metadata = {
 		title,
 		description,
 		siteName: title,
-		url: 'https://meshs.codes',
+		url: 'https://about.meshs.codes',
 	},
 }
 
 export default function Home() {
 	return (
-		<div className="mt-[20vh]">
+		<div className="mt-[15vh] md:mt-[20vh]">
 			<Banner />
 			<main className="mt-8">
-				<div className="mx-auto w-8/12 flex">
-					<section className="flex-1 mr-4">
+				<div className="mx-auto w-8/12 flex flex-col md:flex-row">
+					<section className="flex-1 md:mr-4">
 						<SocialLinks />
 					</section>
 
