@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import Banner from './components/banner'
+import BorderBox from './components/border-box'
 import SocialLinks from './components/social-links'
 
 const title = 'Mesh Sun Portfolio'
@@ -33,6 +34,22 @@ export default function Home() {
 		<div className="mt-[15vh] md:mt-[20vh]">
 			<Banner />
 			<main className="mt-8">
+				<div className="mb-8 flex justify-center">
+					<BorderBox className="p-4 inline-block max-w-[350px] shadow text-white rounded-lg text-sm md:max-w-none hover:shadow-lg transition-shadow">
+						<p>
+							🤩 &nbsp; I'm currently building AI news platform.{' '}
+							<a
+								className="font-medium underline"
+								href="https://www.news-pulp.com/"
+								target="_blank"
+								rel="noopener noreferrer">
+								News Pulp
+							</a>{' '}
+							for empowering user create news with AI and trust source.
+						</p>
+					</BorderBox>
+				</div>
+
 				<div className="mx-auto w-11/12 md:w-8/12 flex flex-col space-y-4 md:flex-row md:space-y-0">
 					<section className="flex-1 md:mr-4">
 						<SocialLinks />
